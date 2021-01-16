@@ -1,11 +1,6 @@
 name: Download from Localazy
 on:
   workflow_dispatch:
-    inputs:
-      branch:
-        description: "Branch to commit the new translations."
-        required: true
-        default: "master"
 
 jobs:
   localazy-download:
@@ -16,7 +11,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: ${{ github.head_ref }}
-      
+
       - name: Download Localazy
         uses: localazy/download@v1
         with:
@@ -27,5 +22,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Updated translations via Localazy
-          branch: ${{ github.event.inputs.branch }}
           file_pattern: src/i18n/locales/*.json
