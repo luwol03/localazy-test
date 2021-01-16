@@ -35,6 +35,7 @@ function App() {
         <div>
           {t("language")} {language}
         </div>
+        <h2>{t("helloWorld")}</h2>
       </header>
     </div>
   );

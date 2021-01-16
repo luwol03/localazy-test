@@ -1,5 +1,6 @@
 {
   "editAndReload": "Edit {{filename}} and save to reload.",
   "learnReact": "Learn React",
-  "language": "Language:"
+  "language": "Language:",
+  "helloWorld": "Hello World"
 }
