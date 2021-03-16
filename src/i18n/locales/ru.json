@@ -1,10 +1,4 @@
 {
-  "auth": {
-    "password": "Password",
-    "username": "Username"
-  },
-  "editAndReload": "Edit {{filename}} and save to reload.",
   "helloWorld": "Привет мир!",
-  "language": "Язык",
-  "learnReact": "Learn React"
+  "language": "Язык"
 }

@@ -3,8 +3,6 @@
     "password": "Mot de passe",
     "username": "Nom d'utilisateur"
   },
-  "editAndReload": "Edit {{filename}} and save to reload.",
   "helloWorld": "Bonjour le Monde!",
-  "language": "Langue :",
-  "learnReact": "Learn React"
+  "language": "Langue :"
 }
