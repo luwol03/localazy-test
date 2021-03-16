@@ -4,7 +4,7 @@
     "username": "Username"
   },
   "editAndReload": "Edit {{filename}} and save to reload.",
-  "helloWorld": "Hello World!",
+  "helloWorld": "Привет мир!",
   "language": "Язык",
   "learnReact": "Learn React"
 }
