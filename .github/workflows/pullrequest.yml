@@ -21,6 +21,9 @@ jobs:
 
       - name: comment on pull request
         if: steps.changes.outputs.translations == 'true'
+        run: |
+          files=$(node -e 'console.log("+ " + JSON.parse(`${{ steps.changes.outputs.translations_files }}`).join("\n+ "))')
+          echo ::set-output files=image::${TAGS}
         uses: thollander/actions-comment-pull-request@master
         with:
           message: |
@@ -29,7 +32,7 @@ jobs:
             If this pull request is merged into the `main` branch, it can be translated via localazy.
 
             Please remove following files
-            ```
+            ```diff
             ${{ steps.changes.outputs.translations_files }}
             ```
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
