@@ -6,5 +6,10 @@
   "auth": {
     "username": "Username",
     "password": "Password"
-  }
+  },
+  "test": ["a", "b", "c"],
+  "user": "user",
+  "user_plural": "users plural",
+  "user_2": "users 2",
+  "user_two": "users two"
 }
