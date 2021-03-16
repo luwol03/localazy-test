@@ -1,4 +1,8 @@
 {
+  "auth": {
+    "password": "Password",
+    "username": "Benutzername"
+  },
   "editAndReload": "Bearbeite und speichere {{filename}} um neu zu laden.",
   "helloWorld": "Hallo Welt!",
   "language": "Sprache:",
