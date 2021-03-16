@@ -19,13 +19,13 @@ jobs:
             translations:
               - "src/i18n/locales/!(en)*.json"
 
-      - name: comment on pr
+      - name: comment on pull request
         if: steps.changes.outputs.translations == 'true'
         uses: thollander/actions-comment-pull-request@master
         with:
           message: |
             Thank you for your pull request.
-            Please remove your translations. Change only the `en.json`. 
+            Please remove your translations. Change only the `en.json` if necessary. 
             If this pull request is in the `main` branch, it can be translated via localazy.
 
             Please remove following files
@@ -33,3 +33,9 @@ jobs:
             ${{ steps.changes.outputs.translations_files }}
             ```
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: check if failed
+        if: steps.changes.outputs.translations == 'true'
+        run: |
+          echo "only change en.json"
+          exit 1
