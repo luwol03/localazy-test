@@ -28,6 +28,9 @@ jobs:
         with:
           commit_message: Updated translations via Localazy
           file_pattern: src/i18n/locales/*.json
+          commit_author: ""
+          commit_user_name: vocascan
+          commit_user_email: vocascan@gmail.com
 
       - name: upload
         uses: localazy/upload@v1
