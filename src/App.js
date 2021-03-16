@@ -22,6 +22,9 @@ function App() {
           {t("learnReact")}
         </a>
         <br />
+        <h4>{t("auth.username")}</h4>
+        <h4>{t("auth.password")}</h4>
+        <br />
         <select
           value={language}
           onChange={(event) => {
