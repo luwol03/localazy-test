@@ -19,11 +19,15 @@ jobs:
             translations:
               - "src/i18n/locales/!(en)*.json"
 
-      - name: comment on pull request
+      - name: format files output
         if: steps.changes.outputs.translations == 'true'
+        id: files-output
         run: |
           files=$(node -e 'console.log("+ " + JSON.parse(`${{ steps.changes.outputs.translations_files }}`).join("\n+ "))')
-          echo ::set-output files=image::${TAGS}
+          echo ::set-output files=${files}
+
+      - name: comment on pull request
+        if: steps.changes.outputs.translations == 'true'
         uses: thollander/actions-comment-pull-request@master
         with:
           message: |
@@ -33,7 +37,7 @@ jobs:
 
             Please remove following files
             ```diff
-            ${{ steps.changes.outputs.translations_files }}
+            ${{ steps.files-output.outputs.files }}
             ```
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
