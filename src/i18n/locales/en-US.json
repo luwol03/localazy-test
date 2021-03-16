@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "password": "Password",
+    "username": "Username"
+  },
+  "editAndReload": "Edit {{filename}} and save to reload.",
+  "helloWorld": "Hello world!",
+  "language": "Language",
+  "learnReact": "Learn React"
+}

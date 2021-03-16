@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "password": "كلمة المرور",
+    "username": "اسم المستخدم"
+  },
+  "editAndReload": "Edit {{filename}} and save to reload.",
+  "helloWorld": "مرحبا بالعالم!",
+  "language": "اللغة",
+  "learnReact": "Learn React"
+}
