@@ -23,7 +23,7 @@ jobs:
         if: steps.changes.outputs.translations == 'true'
         id: files-output
         run: |
-          files=$(node -e 'console.log("+ " + JSON.parse(`${{ steps.changes.outputs.translations_files }}`).join("\n+ "))')
+          files="$(node -e 'console.log("+ " + JSON.parse(`${{ steps.changes.outputs.translations_files }}`).join("\n+ "))')"
           echo ::set-output files=${files}
 
       - name: comment on pull request
