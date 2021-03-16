@@ -23,7 +23,7 @@ jobs:
         if: steps.changes.outputs.translations == 'true'
         id: files-output
         run: |
-          files=$(node -e 'console.log("+ " + JSON.parse(`${{ steps.changes.outputs.translations_files }}`).join("\n+ "))')
+          files=$(node -e 'console.log("- " + JSON.parse(`${{ steps.changes.outputs.translations_files }}`).join("\n- "))')
           files="${files//$'\n'/'%0A'}"
           echo "::set-output name=files::${files}"
 
@@ -37,7 +37,7 @@ jobs:
             If this pull request is merged into the `main` branch, it can be translated via localazy.
 
             Please remove following files
-            ```diff
+            ```
             ${{ steps.files-output.outputs.files }}
             ```
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
