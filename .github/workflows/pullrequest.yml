@@ -14,7 +14,7 @@ jobs:
         uses: dorny/paths-filter@v2
         id: changes
         with:
-          list-files: shell
+          list-files: json
           filters: |
             translations:
               - "src/i18n/locales/!(en)*.json"
@@ -26,7 +26,7 @@ jobs:
           message: |
             Thank you for your pull request.
             Please remove your translations. Change only the `en.json` if necessary. 
-            If this pull request is in the `main` branch, it can be translated via localazy.
+            If this pull request is merged into the `main` branch, it can be translated via localazy.
 
             Please remove following files
             ```
