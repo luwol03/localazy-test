@@ -1,0 +1,22 @@
+name: check pull requests 2
+on:
+  pull_request:
+
+jobs:
+  check2:
+    name: check pull request 2
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: test print
+        run: |
+          ls -lsa
+          ls -lsa .git/
+
+      - name: echo
+        run: |
+          echo "pr2 ${{ github.head_ref }}"
