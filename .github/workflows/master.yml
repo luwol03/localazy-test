@@ -1,0 +1,19 @@
+name: master 12
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  master:
+    name: master 123
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: test print
+        run: |
+          ls -lsa
+          ls -lsa .git/
